@@ -12,7 +12,7 @@ body {
 }
 
 #showcase {
-  background-image: url("img/showcase.jpg");
+  background-image: url("../img/showcase.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -65,17 +65,17 @@ body {
 }
 
 .pimg1 {
-  background-image: url("img/rollwaves.jpg");
+  background-image: url("../img/rollwaves.jpg");
   min-height: 400px;
 }
 
 .pimg2 {
-  background-image: url("img/bridge.jpg");
+  background-image: url("../img/bridge.jpg");
   min-height: 400px;
 }
 
 .pimg3 {
-  background-image: url("img/twilight.jpg");
+  background-image: url("../img/twilight.jpg");
   height: 100vh;
 }
 

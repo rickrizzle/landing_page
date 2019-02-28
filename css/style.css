@@ -65,13 +65,13 @@ body {
 }
 
 .pimg1 {
-  background-image: url("../img/rollwaves.jpg");
   min-height: 400px;
+  background-image: url("../img/rollwaves.jpg");
 }
 
 .pimg2 {
-  background-image: url("../img/bridge.jpg");
   min-height: 400px;
+  background-image: url("../img/bridge.jpg");
 }
 
 .pimg3 {

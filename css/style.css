@@ -179,32 +179,6 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
-  .navbar a:not(:first-child) {
-    display: none;
-  }
-  .navbar a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .navbar.responsive {
-    position: relative;
-  }
-  .navbar.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .navbar.responsive a {
-    float: none;
-    display: block;
-    text-align: right;
-  }
-}
-
 #container-1,
 #wrapper {
   display: flex;
@@ -213,6 +187,7 @@ body {
   */
   position: relative;
   background-attachment: scroll;
+  border-bottom: 2px solid #926239;
 }
 
 #container-1 .front-pic,
@@ -244,6 +219,7 @@ body {
   display: flex;
   flex: 1;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 #wrapper .flex-stack .flexbox-1,
@@ -251,10 +227,40 @@ body {
   margin: 1em;
 }
 
+#wrapper .flex-stack .flexbox-2 {
+  border-top: 2px solid #926239;
+}
+
 @media (max-width: 568px) {
   .pimg1,
   .pimg2,
   .pimg3 {
     background-attachment: scroll;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {
+    position: relative;
+  }
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
   }
 }

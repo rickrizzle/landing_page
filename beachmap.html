@@ -35,13 +35,23 @@
         }
       ).addTo(mymap);
 
-      let marker = L.marker([40.6287, -73.233]).addTo(mymap);
-      marker.bindPopup("<b>Field 5</b><br>Popular Beach").openPopup();
+      var markerArray = [
+        ["<b>Field 5</b><br>Popular Beach", 40.6287, -73.233],
+        ["<b>Field 2</b><br>Popular Beach for Surfing", 40.6224, -73.2786]
+      ];
 
-      let marker2 = L.marker([40.6224, -73.2786]).addTo(mymap);
-      marker2
-        .bindPopup("<b>Field 2</b><br>Popular Beach for Surfing")
-        .openPopup();
+      for (var i = 0; i < markerArray.length; i++) {
+        marker = new L.marker([markerArray[i][1], markerArray[i][2]])
+          .bindPopup(markerArray[i][0])
+          .addTo(mymap);
+      }
+      //let marker = L.marker([40.6287, -73.233]).addTo(mymap);
+      //marker.bindPopup("<b>Field 5</b><br>Popular Beach").openPopup();
+
+      //let marker2 = L.marker([40.6224, -73.2786]).addTo(mymap);
+      //marker2
+      //.bindPopup("<b>Field 2</b><br>Popular Beach for Surfing")
+      //.openPopup();
     </script>
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkoJMNbtYwDl-vkx6Fc9mKsZqS7g9k7_M&callback=initMap"

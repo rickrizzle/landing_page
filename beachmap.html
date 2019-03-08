@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Map of Robert Moses State Park</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Map of Robert Moses State Park</h1>
+    <div id="map"></div>
+
+    <script>
+      let mymap = L.map("map").setView([40.6234, -73.2612], 13);
+      L.tileLayer(
+        "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
+        {
+          attribution:
+            'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+          maxZoom: 18,
+          id: "mapbox.streets",
+          accessToken:
+            "pk.eyJ1Ijoicmlja3JpenpsZTkyIiwiYSI6ImNqdDBoZDNhdDAzODQzeW45MGgxN24wbDcifQ.tVn0nloTbTDYAbLs-UelOg"
+        }
+      ).addTo(mymap);
+
+      let marker = L.marker([40.6287, -73.233]).addTo(mymap);
+      marker.bindPopup("<b>Field 5</b><br>Popular Beach").openPopup();
+
+      let marker2 = L.marker([40.6224, -73.2786]).addTo(mymap);
+      marker2
+        .bindPopup("<b>Field 2</b><br>Popular Beach for Surfing")
+        .openPopup();
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkoJMNbtYwDl-vkx6Fc9mKsZqS7g9k7_M&callback=initMap"
+      async
+      defer
+    ></script>
+  </body>
+</html>

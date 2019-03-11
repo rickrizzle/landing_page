@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Map of Robert Moses State Park</title>
     <link
@@ -11,15 +11,68 @@
     />
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
     <style>
+      body{
+        padding: 0;
+        margin: 0;
+        background-color: #926239;
+        font:  #fff;
+        font-family: "Lato", sans-serif;
+      }
+
       #map {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .text {
+        display: flex;
+        border-radius: 25px;
+        background: sandybrown;
+        margin: 1em;
+        padding: 20px;
+        font-size: 18px;
+        word-spacing: 2px;
+        line-height: 1.6;
+      }
+  
+      @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        /* Styles */
+       #map { 
+         height: 100vh;
+        width: 100vw;
+       }
+      }
+
+      @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+        #map { 
+         height: 100vh;
+        width: 100vw;
+       }
+      }
+
+      /* Desktops and laptops ----------- */
+        @media only screen  and (min-width : 1224px) {
+          #map {
         height: 400px;
         width: 100%;
       }
+          }
+
+        
+      
     </style>
   </head>
   <body>
     <h1>Map of Robert Moses State Park</h1>
     <div id="map"></div>
+
+    <div class="text">
+      <p>Check out Robert Moses from a top-view on the map. <br>Here You'll find the location of the different beaches (called "Fields") along with 
+        other attractions to see while visiting. You won't want to miss the Fire Island lighthouse!
+      </p>
+    </div>
+
 
     <script>
       let mymap = L.map("map").setView([40.6234, -73.2612], 13);
@@ -35,13 +88,18 @@
         }
       ).addTo(mymap);
 
+
+      // Marker Array
       var markerArray = [
+        ["<b>Fire Island Lighthouse</b>", 40.6322, -73.2186],
         ["<b>Field 5</b><br>Popular Beach", 40.6287, -73.233],
         ["<b>Field 2</b><br>Popular Beach for Surfing", 40.6224, -73.2786]
+
       ];
 
+      //Marker for Loop
       for (var i = 0; i < markerArray.length; i++) {
-        marker = new L.marker([markerArray[i][1], markerArray[i][2]])
+        marker = new L.marker([markerArray[i][1], markerArray[i][2], markerArray[i][3]])
           .bindPopup(markerArray[i][0])
           .addTo(mymap);
       }

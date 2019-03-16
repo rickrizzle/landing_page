@@ -9,33 +9,14 @@
   </head>
   <body>
 
-    <div class="navbar">
+    <nav id="navbar">
             <ul> 
                 <li><a href="#">Additional Resources</a></li>
                 <li><a href="index.html">Home</a></li>
             </ul>
-    </div>
+          </nav>
 
-    <div id="container-1">
-          
-      <div class="front-pic"></div>
-      <div class="side-facts">
-        <ul>
-          <li>
-            Did you know: You can walk to Fire Island National Seashore starting
-            from the Lighthouse
-          </li>
-          <li>
-            On the west end of the park is a 18-hole pitch and putt golf course
-          </li>
-          <li>
-            To the west of the state park are many smaller town-owned beaches
-            that feature live events during the summer
-          </li>
-        </ul>
-      </div>
-    </div>
-
+   
     <div id="wrapper">
       <div class="flex-stack">
         <div class="flexbox-1">
@@ -71,27 +52,42 @@
           4 p.m. on weekends only, until mid-November when fees are no longer
           charged.
         </div>
+        <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione magni eligendi aliquam officia ducimus sint nesciunt consequuntur autem quam, quaerat tempora quas fugiat quasi iure? At accusantium totam eius aperiam.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolore eius fugiat facere earum ducimus asperiores corporis, placeat sunt quos ut dolorum, quasi reprehenderit dolores? Aliquid pariatur libero cupiditate dolore nostrum, natus voluptate provident quia doloribus, expedita veniam laudantium beatae deleniti architecto velit nesciunt sunt magni id! Nobis labore omnis eum facilis nemo vitae ipsum ad, quod quia ullam totam. Quaerat enim repellat consequatur delectus reiciendis dolores ea molestias sit eum consequuntur eligendi earum nam, iure, cum vero. Nesciunt cumque libero perspiciatis tempora dolor perferendis inventore ab dolores natus quis molestias error, ex voluptatem consequatur expedita assumenda recusandae illo placeat consequuntur explicabo quae ipsam excepturi! Voluptatem incidunt ut doloribus voluptatibus minima nulla possimus quo quidem voluptas labore quos, tenetur earum cupiditate repellendus illo alias repudiandae. Sunt est dolorum labore veniam assumenda nobis, quae laborum quaerat saepe facilis ab reprehenderit, ea quia repellat sint, harum beatae. Alias cupiditate harum eligendi quo tempore possimus laudantium quidem sit corrupti autem. A, laboriosam sed explicabo optio quas quaerat deserunt totam, amet, officiis consequuntur molestias dolore iure exercitationem nobis commodi error. Rerum qui, expedita nisi quos ullam pariatur, excepturi alias aspernatur suscipit fuga molestias beatae deserunt veniam asperiores quibusdam veritatis! Perferendis temporibus minima doloremque consequatur.
+        </div>
+      </div>
+      <div class="facts">
+        <ul>
+          <li>
+            Did you know: You can walk to Fire Island National Seashore starting
+            from the Lighthouse
+          </li>
+          <li>
+            On the west end of the park is a 18-hole pitch and putt golf course
+          </li>
+          <li>
+            To the west of the state park are many smaller town-owned beaches
+            that feature live events during the summer
+          </li>
+        </ul>
+      </div>
       </div>
     </div>
-<script>
-    // When the user scrolls the page, execute myFunction 
-    window.onscroll = function() {myFunction()};
-    
-    // Get the navbar
-    var navbar = document.getElementById("navbar");
-    
-    // Get the offset position of the navbar
-    var sticky = navbar.offsetTop;
-    
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }
 
+<script>
+  window.onscroll = function () { myFunction() };
+
+  var navbar = document.getElementById("navbar");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+</script>
 </script>
   </body>
 </html>

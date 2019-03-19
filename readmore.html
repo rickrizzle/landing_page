@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>More Info About Robert Moses State Park</title>
   </head>
   <body>
     <nav id="navbar" class="col-1">
-      <ul>
-        <li><a href="#">Additional Resources</a></li>
-        <li><a href="index.html">Home</a></li>
-      </ul>
+      <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">
+          Additional Resources
+          <i class="fa fa-caret-down"></i>
+          <div class="dropdown-content" id="myDropdown">
+            <a href="beachmap.html" class="drop-link">Map of Robert Moses</a>
+          </div>
+        </button>
+      </div>
+      <a href="index.html">Home</a>
     </nav>
 
     <div class="col-2">
@@ -32,7 +42,7 @@
             planner and former president of the Long Island State Park
             Commission.
           </p>
-          <br /
+          <br />
           <h3><strong>Access and Hours</strong></h3>
           <div class="moretext">
             The park is accessible by automobile from the Robert Moses Causeway,
@@ -81,6 +91,22 @@
           navbar.classList.remove("sticky");
         }
       }
+
+      /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(e) {
+        if (!e.target.matches(".dropbtn")) {
+          var myDropdown = document.getElementById("myDropdown");
+          if (myDropdown.classList.contains("show")) {
+            myDropdown.classList.remove("show");
+          }
+        }
+      };
     </script>
   </body>
 </html>
